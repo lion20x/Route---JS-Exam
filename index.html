@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Yummy Exam</title>
+  </head>
+
+  <body>
+    <div
+      class="loadingscreen w-100 vh-100 bg-black z-1 position-absolute top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+    >
+      <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <!-- SIDEBAR NAVIGATION START -->
+    <section class="section-one bg-dark2 w-100">
+      <div id="sidebar-menu" class="d-flex position-fixed">
+        <div
+          class="w-menu vh-100 bg-dark2 d-flex flex-column justify-content-between"
+        >
+          <div class="navdropdown">
+            <div class="holdcenter">
+              <ul>
+                <li onclick="searchPage(), closenav()">
+                  <a href="#">Search</a>
+                </li>
+                <li onclick="categoriesSection(), closenav()">
+                  <a href="#">Categories</a>
+                </li>
+                <li onclick="areaSection(), closenav()">
+                  <a href="#">Area</a>
+                </li>
+                <li onclick="ingredientsSection(), closenav()">
+                  <a href="#">Ingredients</a>
+                </li>
+                <li onclick="contactus(),  closenav(), validateALL()">
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-white ms-4 mb-3 socials">
+            <a href=""><i class="me-2 fa-brands fa-facebook"></i></a>
+            <a href=""><i class="me-1 fa-brands fa-twitter"></i></a>
+            <a href=""><i class="me-1 fa-solid fa-earth-americas"></i></a>
+
+            <p>
+              Copyright Yummy © 2019 <br />
+              All rights reserved.
+            </p>
+          </div>
+        </div>
+
+        <main
+          class="vh-100 w-sidebar bg-white d-flex flex-column justify-content-between align-items-center text-center"
+        >
+          <img class="w-75 pt-4" src="./images/logo.png" alt="" />
+          <div class="side-nav text-black fs-2">
+            <i id="sidebar-icon" class="fas fa-bars"></i>
+          </div>
+          <div class="text-black d-flex justify-content-between flex-column">
+            <i class="p-1 fas fa-globe"></i>
+            <i class="py-2 fas fa-share-alt"></i>
+          </div>
+        </main>
+      </div>
+      <!-- DATA & API SECTION -->
+      <div class="container">
+        <div class="main-container pt-5 px-3">
+          <div class="col-12">
+            <div id="MainContainer" class="row text-center g-4 pb-5"></div>
+            <div id="SearchContainer" class="row col-12"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SIDEBAR NAVIGATION END -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
